@@ -3,15 +3,15 @@ About h5io_browser-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/h5io_browser-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/pyiron/h5io_browser
+Home: https://github.com/h5io/h5io_browser
 
 Package license: BSD-3-Clause
 
 Summary: Easy navigation and data storage for HDF5
 
-Development: https://github.com/pyiron/h5io_browser
+Development: https://github.com/h5io/h5io_browser
 
-Documentation: https://github.com/pyiron/h5io_browser
+Documentation: https://github.com/h5io/h5io_browser
 
 The h5io_browser package extends the h5io interface by
 providing a pointer h5io_browser.Pointer to a specific
