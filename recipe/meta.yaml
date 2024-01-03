@@ -1,5 +1,5 @@
 {% set name = "h5io_browser" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a5f4b4bf2990d29281b2848f2fc439703feef21b55a37c4267a83ced4962b1d1
+  sha256: e3f77c45c78bba1f3b02f0ed23aa6dbf085fd192c39f69d67d794b11143628c0
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - toml
   run:
     - python >=3.8
-    - h5io >=0.1.8,<=0.2.0
+    - h5io =0.2.0
     - h5py >=3.6.0,<=3.10.0
     - numpy >=1.23.5,<=1.26.2
     - pandas >=1.5.3,<=2.1.4
