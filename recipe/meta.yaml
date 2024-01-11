@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/h5io_browser-{{ version }}.tar.gz
   sha256: 32851a4c4c1582b03f1454f35a9a4c48ed90d5cd5828d653ad966a1c81e1d315
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python >=3.8
-    - pip
     - h5io
-    - hdf5
+    - h5py
     - numpy
     - pandas
-    - versioneer
-    - toml
+    - setuptools
+    - versioneer ==0.29
+    - pip
   run:
     - python >=3.8
     - h5io >=0.2.0,<=0.2.1
@@ -34,14 +34,14 @@ requirements:
 test:
   imports:
     - h5io_browser
-  requires:
-    - pip
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/h5io/h5io_browser
-  summary: 'Easy navigation and data storage for HDF5'
+  summary: Easy navigation and data storage for HDF5
   description: |
     The h5io_browser package extends the h5io interface by 
     providing a pointer h5io_browser.Pointer to a specific 
