@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/h5io_browser-{{ version }}.tar.gz
   sha256: 5c2d1d7eaaf12b54d5fd6f2899aa39185c216555fc9ae89a604989f6d6e0cb78
+  patches:
+    - bugfix.patch
 
 build:
   noarch: python
