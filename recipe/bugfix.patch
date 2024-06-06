@@ -1,0 +1,31 @@
+From 8aa7621ea470530c190eec17c5eacee9e36d50f6 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Thu, 6 Jun 2024 16:11:42 +0200
+Subject: [PATCH] Fix bug (#43)
+
+---
+ h5io_browser/base.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/h5io_browser/base.py b/h5io_browser/base.py
+index 7b7ee04..ac9ea53 100644
+--- a/h5io_browser/base.py
++++ b/h5io_browser/base.py
+@@ -100,7 +100,7 @@ def read_dict_from_hdf(
+                     return_dict = _merge_nested_dict(
+                         main_dict=return_dict,
+                         add_dict=_get_nested_dict_item(
+-                            key=n[1:],
++                            key=n,
+                             value=_read_hdf(hdf_filehandle=hdf, h5_path=n, slash=slash),
+                         ),
+                     )
+@@ -172,6 +172,8 @@ def _get_nested_dict_item(key, value):
+         dict: hierarchical dictionary
+     """
+     groups = key.split("/")
++    if groups[0] == "":
++        del groups[0]
+     nested_dict = value
+     for g in groups[::-1]:
+         nested_dict = {g: nested_dict}
