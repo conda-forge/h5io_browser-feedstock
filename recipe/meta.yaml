@@ -1,5 +1,5 @@
 {% set name = "h5io_browser" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/h5io_browser-{{ version }}.tar.gz
-  sha256: 96706a8a1b50789404ee76fe2857c97593a062485b1b95ec628ff985ae67a412
+  sha256: 42baac3b0a8b12a79b82bbb124e9726147d16c7fe2632b1af3088464e764cf99
 
 build:
   noarch: python
