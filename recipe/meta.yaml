@@ -1,5 +1,5 @@
 {% set name = "h5io_browser" %}
-{% set version = "0.0.18" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/h5io_browser-{{ version }}.tar.gz
-  sha256: 42baac3b0a8b12a79b82bbb124e9726147d16c7fe2632b1af3088464e764cf99
+  sha256: 7636b132417a6ab0477ef543677a729f91e1ae7fe7ee06df7f3839fbb74d7dbb
 
 build:
   noarch: python
@@ -28,7 +28,7 @@ requirements:
     - python >=3.8
     - h5io >=0.2.2,<=0.2.4
     - h5py >=3.6.0,<=3.11.0
-    - numpy >=1.23.5,<=2.0.1
+    - numpy >=1.23.5,<=2.1.0
     - pandas >=1.5.3,<=2.2.2
 
 test:
