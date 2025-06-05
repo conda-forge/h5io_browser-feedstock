@@ -39,7 +39,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-h5io_browser-green.svg)](https://anaconda.org/conda-forge/h5io_browser) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/h5io_browser.svg)](https://anaconda.org/conda-forge/h5io_browser) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/h5io_browser.svg)](https://anaconda.org/conda-forge/h5io_browser) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/h5io_browser.svg)](https://anaconda.org/conda-forge/h5io_browser) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-h5io__browser-green.svg)](https://anaconda.org/conda-forge/h5io_browser) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/h5io_browser.svg)](https://anaconda.org/conda-forge/h5io_browser) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/h5io_browser.svg)](https://anaconda.org/conda-forge/h5io_browser) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/h5io_browser.svg)](https://anaconda.org/conda-forge/h5io_browser) |
 
 Installing h5io_browser
 =======================
