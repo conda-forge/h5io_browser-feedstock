@@ -20,7 +20,6 @@ With this pointer, data can be read, stored, copied and
 deleted from the HDF5 file, while at the same time simplifying
 the navigation inside the hierarchy of the file.
 
-
 Current build status
 ====================
 
