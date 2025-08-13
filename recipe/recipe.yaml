@@ -1,0 +1,66 @@
+schema_version: 1
+
+context:
+  name: h5io_browser
+  version: 0.1.14
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/h5io_browser-${{ version }}.tar.gz
+  sha256: 0cb02ea311581faad71eb1e6c99a37d34280a32cbddfad196839337878238cfc
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - h5io
+    - h5py
+    - numpy
+    - pandas
+    - hatchling
+    - hatch-vcs
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - h5io >=0.2.2,<=0.2.5
+    - h5py >=3.6.0,<=3.14.0
+    - numpy >=1.23.5,<=2.3.2
+    - pandas >=1.5.3,<=2.3.1
+
+tests:
+  - python:
+      imports:
+        - h5io_browser
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Easy navigation and data storage for HDF5
+  description: |
+    The h5io_browser package extends the h5io interface by
+    providing a pointer h5io_browser.Pointer to a specific
+    path inside the hierarchical structure of the HDF5 file.
+    With this pointer, data can be read, stored, copied and
+    deleted from the HDF5 file, while at the same time simplifying
+    the navigation inside the hierarchy of the file.
+  license: BSD-3-Clause
+  license_file: LICENSE
+  homepage: https://github.com/h5io/h5io_browser
+  repository: https://github.com/h5io/h5io_browser
+  documentation: https://github.com/h5io/h5io_browser
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
