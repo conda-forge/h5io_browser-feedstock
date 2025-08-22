@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: h5io_browser
-  version: 0.1.14
+  version: "0.1.15"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/h5io_browser-${{ version }}.tar.gz
-  sha256: 0cb02ea311581faad71eb1e6c99a37d34280a32cbddfad196839337878238cfc
+  sha256: 18384794849a55175edd1b8fbce9affcc45ba6259db4e649b2015085e8522346
 
 build:
   number: 1
