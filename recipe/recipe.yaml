@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/h5io_browser-${{ version }}.tar.gz
-  sha256: 64818cf1982e50cf6b73f48207ea4ae3975f84f664933b79ef88145489e04279
+  sha256: bf931bb7483844747ee3eba0f462b9b9f6d542870a27ae5afc5655004007a5ec
 
 build:
   number: 0
