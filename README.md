@@ -51,31 +51,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `h5io_browser` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install h5io_browser
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install h5io_browser
 ```
 
-It is possible to list all of the versions of `h5io_browser` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add h5io_browser
+# for installing globally
+pixi global install h5io_browser
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `h5io_browser` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search h5io_browser --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search h5io_browser --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search h5io_browser --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -87,6 +129,8 @@ mamba repoquery whoneeds h5io_browser --channel conda-forge
 # List dependencies of `h5io_browser`:
 mamba repoquery depends h5io_browser --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
