@@ -37,7 +37,9 @@ tests:
   - python:
       imports:
         - h5io_browser
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - pip
