@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: h5io_browser
-  version: 0.3.0
+  version: 0.3.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/h5io_browser-${{ version }}.tar.gz
-  sha256: 68d2a5db145a11fffc91fcfdb55a54d5592427301ebc6fbf1e0c3d35d6172cbc
+  sha256: 550880c887acf59befb26a674814a33935c9299c8da9aa18f973a09b9f5d4f92
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - h5io ==0.2.6
     - h5py >=3.6.0,<=3.16.0
     - numpy >=1.23.5,<=2.5.3
-    - pandas >=1.5.3,<=3.0.6
+    - pandas >=1.5.3,<=3.1.1
 tests:
   - python:
       imports:
